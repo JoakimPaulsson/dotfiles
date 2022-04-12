@@ -13,4 +13,8 @@ function utils.map(mode, lhs, rhs, opts)
   vim.api.nvim_set_keymap(mode, lhs, rhs, options)
 end
 
+function utils.pumvisible()
+    return vim.fn.pumvisible ~= 0
+end
+
 return utils
