@@ -7,9 +7,9 @@ return require('packer').startup(function(use)
 	}
 
 	use 'neovim/nvim-lspconfig'
-    use { 'nvim-lua/completion-nvim' }
 
     -- Lua development
+    use { 'nvim-lua/completion-nvim' }
     use { 'tjdevries/nlua.nvim' }
 
     use { 'ms-jpq/coq_nvim', branch = 'coq' }

@@ -26,5 +26,6 @@ require('keymappings')
 
 -- Setup Lua language server using submodule
 require('lsp_lua')
+require('lsp_all')
 
 require('config.nord')
