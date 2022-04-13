@@ -16,6 +16,5 @@ return require('packer').startup(function(use)
     use { 'ms-jpq/coq.artifacts', branch = 'artifacts' }
     use { 'ms-jpq/coq.thirdparty', branch = '3p' }
 
-    use 'shaunsingh/nord.nvim'
-
+    use { 'shaunsingh/nord.nvim' }
 end)

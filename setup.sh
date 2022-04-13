@@ -10,7 +10,8 @@ thisdir=$(pwd)
 [ -f "$configdir/nvim/init.lua" ] && rm "$configdir/nvim/init.lua"
 ln -s "$thisdir/nvim/init.lua" "$configdir/nvim/init.lua"
 
-[ -d "$configdir/nvim/lua" ] && rm -rf "$configdir/nvim/lua" && ln -s "$thisdir/nvim/lua" "$configdir/nvim/lua"
+[ -d "$configdir/nvim/lua" ] && rm -rf "$configdir/nvim/lua"
+ln -s "$thisdir/nvim/lua" "$configdir/nvim/lua"
 
 [ -d "$configdir/nvim/plugin" ] && rm -rf "$configdir/nvim/plugin" && ln -s "$thisdir/nvim/plugin" "$configdir/nvim/plugin"
 
@@ -23,3 +24,10 @@ ln -s "$thisdir/alacritty.yml" "$configdir/alacritty/alacritty.yml"
 # tmux files
 [ -f "$HOME/.tmux.conf" ] && rm "$HOME/.tmux.conf"
 ln -s "$thisdir/.tmux.conf" "$HOME/.tmux.conf"
+
+# kitty files
+# check kitty folder and create if necessary
+curl -o ~/.config/kitty/nord.conf https://raw.githubusercontent.com/connorholyday/nord-kitty/master/nord.conf
+[ ! -d "$configdir/kitty" ] && mkdir -p "$configdir/kitty"
+[ -f "$configdir/kitty/kitty.conf" ] && rm "$configdir/kitty/kitty.conf"
+ln -s "$thisdir/kitty.conf" "$configdir/kitty/kitty.conf"
